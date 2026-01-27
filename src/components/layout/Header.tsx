@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import omshantiLogo from "@/assets/omshantiLogo.svg";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -35,17 +36,25 @@ const Header = () => {
       <div className="hidden md:block bg-primary text-primary-foreground py-2">
         <div className="container-custom flex justify-between items-center text-sm px-4">
           <div className="flex items-center gap-6">
-            <a href="tel:+919876543210" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <a
+              href="tel:+919876543210"
+              className="flex items-center gap-2 hover:text-accent transition-colors"
+            >
               <Phone className="w-4 h-4" />
               +91 98765 43210
             </a>
-            <a href="mailto:info@omshantiproperties.com" className="flex items-center gap-2 hover:text-gold transition-colors">
+            <a
+              href="mailto:info@omshantiproperties.com"
+              className="flex items-center gap-2 hover:text-accent transition-colors"
+            >
               <Mail className="w-4 h-4" />
               info@omshantiproperties.com
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-primary-foreground/80">Mon - Sat: 10:00 AM - 7:00 PM</span>
+            <span className="text-primary-foreground/80">
+              Mon - Sat: 10:00 AM - 7:00 PM
+            </span>
           </div>
         </div>
       </div>
@@ -60,13 +69,13 @@ const Header = () => {
       >
         <div className="container-custom flex items-center justify-between px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-xl">ॐ</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display text-xl font-bold text-primary">Om Shanti</span>
-              <span className="text-xs text-muted-foreground -mt-1">Properties</span>
+          <Link to="/" className="flex items-center gap-3 group">
+            <div className="relative overflow-hidden rounded-lg transition-all duration-300 group-hover:shadow-lg">
+              <img
+                src={omshantiLogo}
+                alt="Om Shanti Properties"
+                className="h-16 w-auto group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </Link>
 
@@ -89,7 +98,11 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <Button variant="gold" size="lg" asChild>
+            <Button
+              className="bg-accent hover:bg-accent/90 text-white"
+              size="lg"
+              asChild
+            >
               <a href="tel:+919876543210" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 Call Now
@@ -103,7 +116,11 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -130,8 +147,14 @@ const Header = () => {
                     {link.name}
                   </Link>
                 ))}
-                <Button variant="gold" className="mt-4" asChild>
-                  <a href="tel:+919876543210" className="flex items-center justify-center gap-2">
+                <Button
+                  className="bg-accent hover:bg-accent/90 text-white mt-4"
+                  asChild
+                >
+                  <a
+                    href="tel:+919876543210"
+                    className="flex items-center justify-center gap-2"
+                  >
                     <Phone className="w-4 h-4" />
                     Call Now
                   </a>

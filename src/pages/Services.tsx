@@ -2,14 +2,28 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Home, Key, FileText, Users, TrendingUp, Scale, CheckCircle, ArrowRight } from "lucide-react";
+import {
+  Home,
+  Key,
+  FileText,
+  Users,
+  TrendingUp,
+  Scale,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import residentialImg from "@/assets/residential-building.jpg";
+import commercialImg from "@/assets/commercial-property.jpg";
+import landConversionImg from "@/assets/land-conversion.jpg";
+import consultationImg from "@/assets/consultation.jpg";
 
 interface Service {
   icon: LucideIcon;
   title: string;
   description: string;
   features: string[];
+  image: string;
   process?: string[];
 }
 
@@ -17,7 +31,9 @@ const services: Service[] = [
   {
     icon: Home,
     title: "Property Buying & Selling",
-    description: "Whether you're buying your first home or selling an investment property, we provide expert guidance throughout the entire process. Our extensive network and market knowledge ensure you get the best deals in Ranchi.",
+    description:
+      "Whether you're buying your first home or selling an investment property, we provide expert guidance throughout the entire process. Our extensive network and market knowledge ensure you get the best deals in Ranchi.",
+    image: residentialImg,
     features: [
       "Residential property transactions (apartments, independent houses, villas)",
       "Commercial property buying/selling (shops, offices, showrooms)",
@@ -38,7 +54,9 @@ const services: Service[] = [
   {
     icon: Key,
     title: "Rental Services",
-    description: "Find your perfect rental property or reliable tenants with our comprehensive rental management services. We handle everything from property listing to tenant verification.",
+    description:
+      "Find your perfect rental property or reliable tenants with our comprehensive rental management services. We handle everything from property listing to tenant verification.",
+    image: residentialImg,
     features: [
       "Residential rental listings",
       "Commercial space rentals",
@@ -52,7 +70,9 @@ const services: Service[] = [
   {
     icon: FileText,
     title: "Land Conversion (NA)",
-    description: "Navigate the complex process of converting agricultural land to non-agricultural (NA) use with our expert assistance. We handle all legal formalities and government procedures.",
+    description:
+      "Navigate the complex process of converting agricultural land to non-agricultural (NA) use with our expert assistance. We handle all legal formalities and government procedures.",
+    image: landConversionImg,
     features: [
       "Land survey and verification",
       "Application preparation and submission",
@@ -65,7 +85,9 @@ const services: Service[] = [
   {
     icon: Users,
     title: "Real Estate Consultation",
-    description: "Get professional advice from our experienced real estate consultants. We help you make informed decisions about property investments, market trends, and future prospects.",
+    description:
+      "Get professional advice from our experienced real estate consultants. We help you make informed decisions about property investments, market trends, and future prospects.",
+    image: consultationImg,
     features: [
       "Property investment planning",
       "Market trend analysis",
@@ -79,7 +101,9 @@ const services: Service[] = [
   {
     icon: TrendingUp,
     title: "Investment Advisory",
-    description: "Make smart property investments with our strategic advisory services. We analyze market conditions, identify high-potential properties, and guide you toward profitable real estate investments.",
+    description:
+      "Make smart property investments with our strategic advisory services. We analyze market conditions, identify high-potential properties, and guide you toward profitable real estate investments.",
+    image: commercialImg,
     features: [
       "Investment property identification",
       "ROI analysis and projections",
@@ -93,7 +117,9 @@ const services: Service[] = [
   {
     icon: Scale,
     title: "Legal Documentation",
-    description: "Ensure smooth and legally compliant property transactions with our comprehensive documentation services. We handle all paperwork so you can have peace of mind.",
+    description:
+      "Ensure smooth and legally compliant property transactions with our comprehensive documentation services. We handle all paperwork so you can have peace of mind.",
+    image: commercialImg,
     features: [
       "Sale deed preparation",
       "Rental agreement drafting",
@@ -122,10 +148,12 @@ const Services = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Our <span className="text-gold">Services</span>
+              Our <span className="text-accent">Services</span>
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              Comprehensive real estate solutions tailored to your needs. From property transactions to legal documentation, we've got you covered.
+              Comprehensive real estate solutions tailored to your needs. From
+              property transactions to legal documentation, we've got you
+              covered.
             </p>
           </motion.div>
         </div>
@@ -142,12 +170,38 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className={`grid lg:grid-cols-2 gap-8 items-start ${
+                className={`grid lg:grid-cols-2 gap-8 items-center ${
                   index % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
               >
+                {/* Image */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className={`relative rounded-2xl overflow-hidden h-80 md:h-96 shadow-lg ${
+                    index % 2 === 1 ? "lg:order-2" : ""
+                  }`}
+                >
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-primary-foreground">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <p className="font-semibold">{service.title}</p>
+                    </div>
+                  </div>
+                </motion.div>
+
                 {/* Content */}
-                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                <div className={index % 2 === 1 ? "lg:order-1" : ""}>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
                       <service.icon className="w-7 h-7 text-primary" />
@@ -162,42 +216,20 @@ const Services = () => {
 
                   {/* Features */}
                   <div className="space-y-3">
-                    <h3 className="font-semibold text-foreground">What We Offer:</h3>
+                    <h3 className="font-semibold text-foreground">
+                      What We Offer:
+                    </h3>
                     <ul className="grid sm:grid-cols-2 gap-2">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
+                          <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-muted-foreground">
+                            {feature}
+                          </span>
                         </li>
                       ))}
                     </ul>
                   </div>
-                </div>
-
-                {/* Process or Visual */}
-                <div className={`bg-secondary rounded-2xl p-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                  {service.process ? (
-                    <>
-                      <h3 className="font-display font-semibold text-foreground mb-4">Our Process:</h3>
-                      <div className="space-y-4">
-                        {service.process.map((step, stepIndex) => (
-                          <div key={step} className="flex items-center gap-4">
-                            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground text-sm font-bold flex-shrink-0">
-                              {stepIndex + 1}
-                            </div>
-                            <span className="text-foreground">{step}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </>
-                  ) : (
-                    <div className="text-center py-8">
-                      <service.icon className="w-24 h-24 text-primary/20 mx-auto mb-4" />
-                      <p className="text-muted-foreground">
-                        Expert {service.title.toLowerCase()} services tailored to your needs
-                      </p>
-                    </div>
-                  )}
                 </div>
               </motion.div>
             ))}
@@ -217,9 +249,10 @@ const Services = () => {
               Ready to Get Started?
             </h2>
             <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation. Let us help you navigate your real estate journey with expertise and care.
+              Contact us today for a free consultation. Let us help you navigate
+              your real estate journey with expertise and care.
             </p>
-            <Button variant="gold" size="lg" asChild>
+            <Button className="bg-accent hover:bg-accent/90 text-white" size="lg" asChild>
               <Link to="/contact" className="flex items-center gap-2">
                 Schedule Free Consultation
                 <ArrowRight className="w-4 h-4" />

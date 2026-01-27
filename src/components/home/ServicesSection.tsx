@@ -88,7 +88,7 @@ const ServicesSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <div className="w-12 h-12 bg-gold rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
                     <service.icon className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const ServicesSection = () => {
                 <div className="flex flex-wrap gap-3 mb-4">
                   {service.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-1 text-sm text-foreground/70">
-                      <CheckCircle className="w-4 h-4 text-gold" />
+                      <CheckCircle className="w-4 h-4 text-accent" />
                       {feature}
                     </div>
                   ))}
@@ -115,7 +115,7 @@ const ServicesSection = () => {
 
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 text-primary font-medium hover:text-gold transition-colors"
+                  className="inline-flex items-center gap-2 text-primary font-medium hover:text-accent transition-colors"
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

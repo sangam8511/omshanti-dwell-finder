@@ -25,14 +25,14 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
             className="text-background"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold/20 backdrop-blur-sm rounded-full mb-6">
-              <Star className="w-4 h-4 text-gold fill-gold" />
-              <span className="text-sm font-medium text-gold">Trusted Since 1997</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full mb-6">
+              <Star className="w-4 h-4 text-accent fill-accent" />
+              <span className="text-sm font-medium text-accent">Trusted Since 1997</span>
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Your Dream Property,{" "}
-              <span className="text-gold">Our Commitment</span>
+              <span className="text-accent">Our Commitment</span>
             </h1>
 
             <p className="text-lg text-background/80 mb-8 max-w-xl leading-relaxed">
@@ -41,7 +41,7 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
-              <Button variant="gold" size="lg" asChild>
+              <Button className="bg-accent hover:bg-accent/90 text-white" size="lg" asChild>
                 <Link to="/services" className="flex items-center gap-2">
                   Explore Services
                   <ArrowRight className="w-4 h-4" />
@@ -57,17 +57,17 @@ const HeroSection = () => {
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-1">
                   {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-4 h-4 text-gold fill-gold" />
+                    <Star key={i} className="w-4 h-4 text-accent fill-accent" />
                   ))}
                 </div>
                 <span className="text-sm text-background/80">4.6/5 Rating</span>
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-gold" />
+                <Shield className="w-5 h-5 text-accent" />
                 <span className="text-sm text-background/80">Verified Properties</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-gold" />
+                <Clock className="w-5 h-5 text-accent" />
                 <span className="text-sm text-background/80">27+ Years Experience</span>
               </div>
             </div>
@@ -83,19 +83,19 @@ const HeroSection = () => {
             <div className="bg-background/10 backdrop-blur-md rounded-2xl p-8 border border-background/20">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4">
-                  <div className="text-4xl font-display font-bold text-gold mb-2">27+</div>
+                  <div className="text-4xl font-display font-bold text-accent mb-2">27+</div>
                   <div className="text-sm text-background/70">Years of Excellence</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-4xl font-display font-bold text-gold mb-2">1000+</div>
+                  <div className="text-4xl font-display font-bold text-accent mb-2">1000+</div>
                   <div className="text-sm text-background/70">Happy Clients</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-4xl font-display font-bold text-gold mb-2">500+</div>
+                  <div className="text-4xl font-display font-bold text-accent mb-2">500+</div>
                   <div className="text-sm text-background/70">Properties Sold</div>
                 </div>
                 <div className="text-center p-4">
-                  <div className="text-4xl font-display font-bold text-gold mb-2">4.6★</div>
+                  <div className="text-4xl font-display font-bold text-accent mb-2">4.6★</div>
                   <div className="text-sm text-background/70">Customer Rating</div>
                 </div>
               </div>

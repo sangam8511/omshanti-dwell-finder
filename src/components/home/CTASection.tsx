@@ -22,13 +22,13 @@ const CTASection = () => {
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-background mb-6 leading-tight">
               Ready to Make Your Property{" "}
-              <span className="text-gold">Dreams a Reality?</span>
+              <span className="text-accent">Dreams a Reality?</span>
             </h2>
             <p className="text-background/70 text-lg mb-8 max-w-lg">
               Whether you're buying, selling, or investing, our expert team is ready to guide you every step of the way. Get your free consultation today!
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button variant="gold" size="lg" asChild>
+              <Button className="bg-accent hover:bg-accent/90 text-white" size="lg" asChild>
                 <Link to="/contact" className="flex items-center gap-2">
                   Get Free Consultation
                   <ArrowRight className="w-4 h-4" />
@@ -52,32 +52,32 @@ const CTASection = () => {
             className="space-y-6"
           >
             <div className="flex items-start gap-4 p-4 rounded-xl bg-background/5 backdrop-blur-sm border border-background/10">
-              <div className="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center flex-shrink-0">
-                <Phone className="w-6 h-6 text-gold" />
+              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <Phone className="w-6 h-6 text-accent" />
               </div>
               <div>
                 <div className="text-background/60 text-sm mb-1">Call Us</div>
-                <a href="tel:+919876543210" className="text-background font-medium hover:text-gold transition-colors">
+                <a href="tel:+919876543210" className="text-background font-medium hover:text-accent transition-colors">
                   +91 98765 43210
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-4 rounded-xl bg-background/5 backdrop-blur-sm border border-background/10">
-              <div className="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-6 h-6 text-gold" />
+              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <Mail className="w-6 h-6 text-accent" />
               </div>
               <div>
                 <div className="text-background/60 text-sm mb-1">Email Us</div>
-                <a href="mailto:info@omshantiproperties.com" className="text-background font-medium hover:text-gold transition-colors">
+                <a href="mailto:info@omshantiproperties.com" className="text-background font-medium hover:text-accent transition-colors">
                   info@omshantiproperties.com
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-4 rounded-xl bg-background/5 backdrop-blur-sm border border-background/10">
-              <div className="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center flex-shrink-0">
-                <Clock className="w-6 h-6 text-gold" />
+              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <Clock className="w-6 h-6 text-accent" />
               </div>
               <div>
                 <div className="text-background/60 text-sm mb-1">Office Hours</div>
@@ -88,8 +88,8 @@ const CTASection = () => {
             </div>
 
             <div className="flex items-start gap-4 p-4 rounded-xl bg-background/5 backdrop-blur-sm border border-background/10">
-              <div className="w-12 h-12 rounded-lg bg-gold/20 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-6 h-6 text-gold" />
+              <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-6 h-6 text-accent" />
               </div>
               <div>
                 <div className="text-background/60 text-sm mb-1">Visit Us</div>

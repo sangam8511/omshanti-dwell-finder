@@ -53,11 +53,11 @@ const StatsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-4 py-1.5 bg-gold/20 text-gold text-sm font-medium rounded-full mb-4">
+          <span className="inline-block px-4 py-1.5 bg-accent/20 text-accent text-sm font-medium rounded-full mb-4">
             Our Track Record
           </span>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground">
-            Numbers That Speak <span className="text-gold">Excellence</span>
+            Numbers That Speak <span className="text-accent">Excellence</span>
           </h2>
         </motion.div>
 
@@ -72,7 +72,7 @@ const StatsSection = () => {
               className="text-center"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-foreground/10 mb-4">
-                <stat.icon className="w-8 h-8 text-gold" />
+                <stat.icon className="w-8 h-8 text-accent" />
               </div>
               <div className="text-4xl md:text-5xl font-display font-bold text-primary-foreground mb-2">
                 <AnimatedNumber value={stat.value} suffix={stat.suffix} />

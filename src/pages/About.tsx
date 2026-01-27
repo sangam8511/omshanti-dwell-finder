@@ -2,21 +2,69 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { CheckCircle, Target, Eye, Award, Users, Shield, Heart, TrendingUp, ArrowRight } from "lucide-react";
+import {
+  CheckCircle,
+  Target,
+  Eye,
+  Award,
+  Users,
+  Shield,
+  Heart,
+  TrendingUp,
+  ArrowRight,
+} from "lucide-react";
 
 const timeline = [
-  { year: "1997", title: "Founded", description: "Om Shanti Properties established in Ranchi" },
-  { year: "2005", title: "Expansion", description: "Expanded services to include land conversion" },
-  { year: "2015", title: "Milestone", description: "Crossed 500 successful property transactions" },
-  { year: "2020", title: "Innovation", description: "Introduced digital property consultation services" },
-  { year: "2024", title: "Excellence", description: "Achieved 4.6★ rating with 1000+ happy clients" },
+  {
+    year: "1997",
+    title: "Founded",
+    description: "Om Shanti Properties established in Ranchi",
+  },
+  {
+    year: "2005",
+    title: "Expansion",
+    description: "Expanded services to include land conversion",
+  },
+  {
+    year: "2015",
+    title: "Milestone",
+    description: "Crossed 500 successful property transactions",
+  },
+  {
+    year: "2020",
+    title: "Innovation",
+    description: "Introduced digital property consultation services",
+  },
+  {
+    year: "2024",
+    title: "Excellence",
+    description: "Achieved 4.6★ rating with 1000+ happy clients",
+  },
 ];
 
 const values = [
-  { icon: Shield, title: "Integrity", description: "We operate with complete transparency and honesty in every transaction" },
-  { icon: Award, title: "Expertise", description: "27+ years of deep market knowledge and industry experience" },
-  { icon: Heart, title: "Client Focus", description: "Your satisfaction is our success - personalized service always" },
-  { icon: TrendingUp, title: "Innovation", description: "Adopting modern solutions for traditional real estate needs" },
+  {
+    icon: Shield,
+    title: "Integrity",
+    description:
+      "We operate with complete transparency and honesty in every transaction",
+  },
+  {
+    icon: Award,
+    title: "Expertise",
+    description: "27+ years of deep market knowledge and industry experience",
+  },
+  {
+    icon: Heart,
+    title: "Client Focus",
+    description:
+      "Your satisfaction is our success - personalized service always",
+  },
+  {
+    icon: TrendingUp,
+    title: "Innovation",
+    description: "Adopting modern solutions for traditional real estate needs",
+  },
 ];
 
 const About = () => {
@@ -34,10 +82,11 @@ const About = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              About <span className="text-gold">Om Shanti Properties</span>
+              About <span className="text-accent">Om Shanti Properties</span>
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              Building trust and transforming dreams since 1997. Your reliable partner for all real estate needs in Ranchi.
+              Building trust and transforming dreams since 1997. Your reliable
+              partner for all real estate needs in Ranchi.
             </p>
           </motion.div>
         </div>
@@ -58,13 +107,25 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Established in 1997, Om Shanti Properties has been Ranchi's trusted name in real estate for over 27 years. Located in the heart of Harmu Housing Colony, we specialize in providing comprehensive property solutions that transform dreams into reality.
+                  Established in 1997, Om Shanti Properties has been Ranchi's
+                  trusted name in real estate for over 27 years. Located in the
+                  heart of Harmu Housing Colony, we specialize in providing
+                  comprehensive property solutions that transform dreams into
+                  reality.
                 </p>
                 <p>
-                  With a 4.6-star rating based on 63+ satisfied customers, we pride ourselves on our commitment to transparency, integrity, and exceptional service. Our deep understanding of the Ranchi real estate market, combined with our client-first approach, has made us the preferred choice for property buyers, sellers, and investors across Jharkhand.
+                  With a 4.6-star rating based on 63+ satisfied customers, we
+                  pride ourselves on our commitment to transparency, integrity,
+                  and exceptional service. Our deep understanding of the Ranchi
+                  real estate market, combined with our client-first approach,
+                  has made us the preferred choice for property buyers, sellers,
+                  and investors across Jharkhand.
                 </p>
                 <p>
-                  From humble beginnings to becoming one of the most trusted real estate consultants in the region, our journey has been marked by a relentless pursuit of excellence and customer satisfaction.
+                  From humble beginnings to becoming one of the most trusted
+                  real estate consultants in the region, our journey has been
+                  marked by a relentless pursuit of excellence and customer
+                  satisfaction.
                 </p>
               </div>
             </motion.div>
@@ -77,17 +138,27 @@ const About = () => {
             >
               <div className="bg-primary rounded-2xl p-6 text-primary-foreground">
                 <div className="text-4xl font-display font-bold mb-2">27+</div>
-                <div className="text-sm text-primary-foreground/80">Years of Experience</div>
+                <div className="text-sm text-primary-foreground/80">
+                  Years of Experience
+                </div>
               </div>
               <div className="bg-secondary rounded-2xl p-6">
-                <div className="text-4xl font-display font-bold text-primary mb-2">1000+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
+                <div className="text-4xl font-display font-bold text-primary mb-2">
+                  1000+
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Happy Clients
+                </div>
               </div>
               <div className="bg-secondary rounded-2xl p-6">
-                <div className="text-4xl font-display font-bold text-primary mb-2">500+</div>
-                <div className="text-sm text-muted-foreground">Properties Sold</div>
+                <div className="text-4xl font-display font-bold text-primary mb-2">
+                  500+
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  Properties Sold
+                </div>
               </div>
-              <div className="bg-gold rounded-2xl p-6 text-accent-foreground">
+              <div className="bg-accent rounded-2xl p-6 text-accent-foreground">
                 <div className="text-4xl font-display font-bold mb-2">4.6★</div>
                 <div className="text-sm opacity-80">Customer Rating</div>
               </div>
@@ -109,9 +180,14 @@ const About = () => {
               <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
                 <Target className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                Our Mission
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To provide transparent, reliable, and professional real estate services that help our clients make informed property decisions and achieve their real estate goals. We strive to be the bridge between property dreams and reality.
+                To provide transparent, reliable, and professional real estate
+                services that help our clients make informed property decisions
+                and achieve their real estate goals. We strive to be the bridge
+                between property dreams and reality.
               </p>
             </motion.div>
 
@@ -122,12 +198,17 @@ const About = () => {
               transition={{ delay: 0.1 }}
               className="bg-card rounded-2xl p-8 shadow-sm"
             >
-              <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mb-6">
-                <Eye className="w-7 h-7 text-gold" />
+              <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+                <Eye className="w-7 h-7 text-accent" />
               </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+              <h3 className="font-display text-2xl font-bold text-foreground mb-4">
+                Our Vision
+              </h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be Ranchi's most trusted and innovative real estate consultancy, setting industry standards in customer service and ethical practices. We aim to revolutionize the real estate experience in Jharkhand.
+                To be Ranchi's most trusted and innovative real estate
+                consultancy, setting industry standards in customer service and
+                ethical practices. We aim to revolutionize the real estate
+                experience in Jharkhand.
               </p>
             </motion.div>
           </div>
@@ -157,13 +238,17 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 rounded-2xl border border-border hover:border-gold/30 hover:shadow-lg transition-all duration-300"
+                className="text-center p-6 rounded-2xl border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="font-display text-lg font-bold text-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
+                <h3 className="font-display text-lg font-bold text-foreground mb-2">
+                  {value.title}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {value.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -203,14 +288,22 @@ const About = () => {
                 >
                   {/* Year Badge */}
                   <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-16 h-16 rounded-full bg-primary flex items-center justify-center z-10">
-                    <span className="text-primary-foreground font-display font-bold text-sm">{item.year}</span>
+                    <span className="text-primary-foreground font-display font-bold text-sm">
+                      {item.year}
+                    </span>
                   </div>
 
                   {/* Content */}
-                  <div className={`ml-24 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"}`}>
+                  <div
+                    className={`ml-24 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"}`}
+                  >
                     <div className="bg-card rounded-xl p-6 shadow-sm">
-                      <h3 className="font-display font-bold text-foreground mb-2">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h3 className="font-display font-bold text-foreground mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -231,7 +324,8 @@ const About = () => {
           >
             <span className="section-badge">Why Us</span>
             <h2 className="section-title">
-              Why Choose <span className="text-primary">Om Shanti Properties</span>
+              Why Choose{" "}
+              <span className="text-primary">Om Shanti Properties</span>
             </h2>
           </motion.div>
 
@@ -252,7 +346,7 @@ const About = () => {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center gap-3 p-4 rounded-lg bg-secondary"
               >
-                <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
+                <CheckCircle className="w-6 h-6 text-accent flex-shrink-0" />
                 <span className="font-medium text-foreground">{item}</span>
               </motion.div>
             ))}
@@ -265,7 +359,11 @@ const About = () => {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <Button variant="gold" size="lg" asChild>
+            <Button
+              className="bg-accent hover:bg-accent/90 text-white"
+              size="lg"
+              asChild
+            >
               <Link to="/contact" className="flex items-center gap-2">
                 Get in Touch
                 <ArrowRight className="w-4 h-4" />

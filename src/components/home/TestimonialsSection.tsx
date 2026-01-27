@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
           <div className="relative bg-card rounded-2xl p-8 md:p-12 shadow-lg">
             {/* Quote Icon */}
             <div className="absolute top-6 right-6 md:top-8 md:right-8">
-              <Quote className="w-12 h-12 text-gold/30" />
+              <Quote className="w-12 h-12 text-accent/30" />
             </div>
 
             <AnimatePresence mode="wait">
@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-6">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                    <Star key={i} className="w-5 h-5 text-accent fill-accent" />
                   ))}
                 </div>
 

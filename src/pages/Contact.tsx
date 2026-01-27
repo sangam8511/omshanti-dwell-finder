@@ -4,35 +4,63 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  CheckCircle,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
 import { toast } from "sonner";
 
 const faqs = [
   {
     question: "What areas do you cover in Ranchi?",
-    answer: "We serve all major areas including Harmu, Doranda, Morabadi, Argora, Lalpur, Hinoo, Bariatu, and surrounding regions across Ranchi and Jharkhand.",
+    answer:
+      "We serve all major areas including Harmu, Doranda, Morabadi, Argora, Lalpur, Hinoo, Bariatu, and surrounding regions across Ranchi and Jharkhand.",
   },
   {
     question: "Do you charge consultation fees?",
-    answer: "Initial consultation is absolutely free. Our commission structure is discussed transparently during our first meeting. We believe in upfront communication with no hidden charges.",
+    answer:
+      "Initial consultation is absolutely free. Our commission structure is discussed transparently during our first meeting. We believe in upfront communication with no hidden charges.",
   },
   {
     question: "How long does the property buying process take?",
-    answer: "Typically 30-45 days from property selection to registration, depending on documentation and clearances. We work to expedite the process while ensuring all legal requirements are met.",
+    answer:
+      "Typically 30-45 days from property selection to registration, depending on documentation and clearances. We work to expedite the process while ensuring all legal requirements are met.",
   },
   {
     question: "Do you assist with home loans?",
-    answer: "Yes, we have partnerships with major banks including SBI, HDFC, ICICI, and others. We can assist you with loan processing, documentation, and getting competitive interest rates.",
+    answer:
+      "Yes, we have partnerships with major banks including SBI, HDFC, ICICI, and others. We can assist you with loan processing, documentation, and getting competitive interest rates.",
   },
   {
     question: "What is your land conversion success rate?",
-    answer: "We have a 95%+ success rate in land conversion (NA) applications with an average processing time of 3-6 months, depending on the location and document completeness.",
+    answer:
+      "We have a 95%+ success rate in land conversion (NA) applications with an average processing time of 3-6 months, depending on the location and document completeness.",
   },
   {
     question: "Do you provide post-sale support?",
-    answer: "Absolutely! We provide complete post-sale assistance including mutation, registry, property tax setup, and ongoing support for any property-related queries even after the transaction is complete.",
+    answer:
+      "Absolutely! We provide complete post-sale assistance including mutation, registry, property tax setup, and ongoing support for any property-related queries even after the transaction is complete.",
   },
 ];
 
@@ -49,7 +77,9 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for contacting us! We'll get back to you within 24 hours.");
+    toast.success(
+      "Thank you for contacting us! We'll get back to you within 24 hours.",
+    );
     setFormData({
       name: "",
       email: "",
@@ -75,10 +105,11 @@ const Contact = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Get In <span className="text-gold">Touch</span>
+              Get In <span className="text-accent">Touch</span>
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl leading-relaxed">
-              We're here to help you with all your real estate needs. Reach out to us for a free consultation.
+              We're here to help you with all your real estate needs. Reach out
+              to us for a free consultation.
             </p>
           </motion.div>
         </div>
@@ -106,7 +137,9 @@ const Contact = () => {
                     <Input
                       required
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       placeholder="Your full name"
                     />
                   </div>
@@ -118,7 +151,9 @@ const Contact = () => {
                       required
                       type="tel"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
                       placeholder="+91 98765 43210"
                     />
                   </div>
@@ -132,7 +167,9 @@ const Contact = () => {
                     required
                     type="email"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     placeholder="your@email.com"
                   />
                 </div>
@@ -144,19 +181,31 @@ const Contact = () => {
                     </label>
                     <Select
                       value={formData.service}
-                      onValueChange={(value) => setFormData({ ...formData, service: value })}
+                      onValueChange={(value) =>
+                        setFormData({ ...formData, service: value })
+                      }
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Select service" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="buying">Property Buying</SelectItem>
-                        <SelectItem value="selling">Property Selling</SelectItem>
+                        <SelectItem value="selling">
+                          Property Selling
+                        </SelectItem>
                         <SelectItem value="rental">Rental Services</SelectItem>
-                        <SelectItem value="land-conversion">Land Conversion</SelectItem>
-                        <SelectItem value="consultation">Real Estate Consultation</SelectItem>
-                        <SelectItem value="investment">Investment Advisory</SelectItem>
-                        <SelectItem value="legal">Legal Documentation</SelectItem>
+                        <SelectItem value="land-conversion">
+                          Land Conversion
+                        </SelectItem>
+                        <SelectItem value="consultation">
+                          Real Estate Consultation
+                        </SelectItem>
+                        <SelectItem value="investment">
+                          Investment Advisory
+                        </SelectItem>
+                        <SelectItem value="legal">
+                          Legal Documentation
+                        </SelectItem>
                         <SelectItem value="other">Other</SelectItem>
                       </SelectContent>
                     </Select>
@@ -167,7 +216,9 @@ const Contact = () => {
                     </label>
                     <Select
                       value={formData.propertyType}
-                      onValueChange={(value) => setFormData({ ...formData, propertyType: value })}
+                      onValueChange={(value) =>
+                        setFormData({ ...formData, propertyType: value })
+                      }
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Select type" />
@@ -175,7 +226,9 @@ const Contact = () => {
                       <SelectContent>
                         <SelectItem value="residential">Residential</SelectItem>
                         <SelectItem value="commercial">Commercial</SelectItem>
-                        <SelectItem value="agricultural">Agricultural</SelectItem>
+                        <SelectItem value="agricultural">
+                          Agricultural
+                        </SelectItem>
                         <SelectItem value="land">Land</SelectItem>
                       </SelectContent>
                     </Select>
@@ -189,7 +242,9 @@ const Contact = () => {
                   <Textarea
                     required
                     value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
                     placeholder="Tell us about your requirements..."
                     rows={4}
                   />
@@ -200,16 +255,26 @@ const Contact = () => {
                     type="checkbox"
                     id="consent"
                     checked={formData.consent}
-                    onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, consent: e.target.checked })
+                    }
                     className="mt-1"
                     required
                   />
-                  <label htmlFor="consent" className="text-sm text-muted-foreground">
-                    I agree to be contacted by Om Shanti Properties regarding my inquiry
+                  <label
+                    htmlFor="consent"
+                    className="text-sm text-muted-foreground"
+                  >
+                    I agree to be contacted by Om Shanti Properties regarding my
+                    inquiry
                   </label>
                 </div>
 
-                <Button variant="gold" size="lg" type="submit" className="w-full sm:w-auto">
+                <Button
+                  className="bg-accent hover:bg-accent/90 text-white w-full sm:w-auto"
+                  size="lg"
+                  type="submit"
+                >
                   <Send className="w-4 h-4 mr-2" />
                   Send Message
                 </Button>
@@ -233,10 +298,14 @@ const Contact = () => {
                       <MapPin className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Visit Our Office</h3>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        Visit Our Office
+                      </h3>
                       <p className="text-muted-foreground text-sm">
-                        H 25 (2nd Floor), Harmu Housing Colony,<br />
-                        Beside Harmu Field, Harmu Chowk,<br />
+                        H 25 (2nd Floor), Harmu Housing Colony,
+                        <br />
+                        Beside Harmu Field, Harmu Chowk,
+                        <br />
                         Ranchi - 834002, Jharkhand
                       </p>
                     </div>
@@ -247,8 +316,13 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Call Us</h3>
-                      <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-foreground mb-1">
+                        Call Us
+                      </h3>
+                      <a
+                        href="tel:+919876543210"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
                         +91 98765 43210
                       </a>
                     </div>
@@ -259,8 +333,13 @@ const Contact = () => {
                       <Mail className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Email Us</h3>
-                      <a href="mailto:info@omshantiproperties.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      <h3 className="font-semibold text-foreground mb-1">
+                        Email Us
+                      </h3>
+                      <a
+                        href="mailto:info@omshantiproperties.com"
+                        className="text-muted-foreground hover:text-primary transition-colors"
+                      >
                         info@omshantiproperties.com
                       </a>
                     </div>
@@ -271,9 +350,12 @@ const Contact = () => {
                       <Clock className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">Office Hours</h3>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        Office Hours
+                      </h3>
                       <p className="text-muted-foreground text-sm">
-                        Monday - Saturday: 10:00 AM - 7:00 PM<br />
+                        Monday - Saturday: 10:00 AM - 7:00 PM
+                        <br />
                         Sunday: By Appointment Only
                       </p>
                     </div>
@@ -283,18 +365,32 @@ const Contact = () => {
 
               {/* Social Links */}
               <div>
-                <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
+                <h3 className="font-semibold text-foreground mb-4">
+                  Follow Us
+                </h3>
                 <div className="flex items-center gap-3">
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
                     <Facebook className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
+                  <a
+                    href="#"
+                    className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
                     <Youtube className="w-5 h-5" />
                   </a>
                 </div>
@@ -327,7 +423,11 @@ const Contact = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: CheckCircle, label: "Schedule a Site Visit", href: "#" },
-              { icon: CheckCircle, label: "Request Property Valuation", href: "#" },
+              {
+                icon: CheckCircle,
+                label: "Request Property Valuation",
+                href: "#",
+              },
               { icon: CheckCircle, label: "Get Investment Advice", href: "#" },
               { icon: CheckCircle, label: "Download Our Brochure", href: "#" },
             ].map((action) => (
@@ -369,7 +469,10 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <AccordionItem value={`item-${index}`} className="border border-border rounded-lg px-4">
+                  <AccordionItem
+                    value={`item-${index}`}
+                    className="border border-border rounded-lg px-4"
+                  >
                     <AccordionTrigger className="text-left font-medium hover:text-primary">
                       {faq.question}
                     </AccordionTrigger>

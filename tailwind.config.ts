@@ -62,10 +62,6 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         // Custom colors
-        gold: {
-          DEFAULT: "hsl(var(--gold))",
-          light: "hsl(var(--gold-light))",
-        },
         maroon: {
           DEFAULT: "hsl(var(--maroon))",
           dark: "hsl(var(--maroon-dark))",
@@ -83,7 +79,7 @@ export default {
         "sm": "var(--shadow-sm)",
         "md": "var(--shadow-md)",
         "lg": "var(--shadow-lg)",
-        "gold": "var(--shadow-gold)",
+        "accent": "var(--shadow-accent)",
         "maroon": "var(--shadow-maroon)",
       },
       keyframes: {
@@ -138,7 +134,7 @@ export default {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-primary": "linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--maroon-dark)) 100%)",
-        "gradient-gold": "linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%)",
+        "gradient-accent": "linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(43 96% 65%) 100%)",
       },
     },
   },
